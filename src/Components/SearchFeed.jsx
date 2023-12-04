@@ -7,10 +7,10 @@ import { useParams } from "react-router-dom";
 const SearchFeed = () => {
   const [videos, setVideos] = useState([]);
   const { searchTerm } = useParams();
-
+  console.log("searchTerm", searchTerm);
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}`).then((data) => {
-      console.log("API Response:", data);
+      console.log(" search API Response:", data);
       setVideos(data.items || []);
     });
   }, [searchTerm]);

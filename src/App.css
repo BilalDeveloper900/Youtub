@@ -2,3 +2,7 @@
     display: inline-grid;
     grid-template-columns: auto auto auto;
   }
+  .react-player {
+    height: 77vh !important;
+    width: 100% !important;
+  }
